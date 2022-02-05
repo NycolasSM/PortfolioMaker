@@ -1,0 +1,50 @@
+.project-component_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(199, 60, 74) , rgb(127, 73, 197));
+  border-radius: 30px;
+  width: 90vw;
+  max-width: 1500px;
+}
+
+.project-component_1 img{
+  display: flex;
+  flex: 30%;
+  height: 500px;
+}
+
+.project-component_1-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 60px;
+  flex: 40%;
+}
+
+.project-component_1-description h2 {
+  font-size: 2rem;
+}
+
+.project-component_1-description p {
+  font-size: 1.5rem;
+  width: 400px;
+}
+
+.project-component_1-description p:empty::before {
+  content: "dolor sit amet consectetur, adipisicing elit. Architecto, expedita molestiae. Unde non nihil velit";
+}
+
+.project-component_1-delete-button {
+  color: #fd2626de;
+  opacity: 1;
+  transition: all ease 0.1s;
+  position: absolute;
+  left: 1%;
+}
+
+.project-component_1-delete-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.portfolio-header-container_layout1 {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.portfolio-user-apresentation_layout1 span {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.portfolio-user-apresentation_layout1 h3{
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+
+
+.portfolio-apresentation-buttons_layout1 button {
+  margin-top: 30px;
+  margin-right: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  display: inline-block;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+}
+
+.portfolio-apresentation-buttons_layout1 button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 26px;
+}

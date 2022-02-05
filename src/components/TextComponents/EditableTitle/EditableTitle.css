@@ -1,0 +1,86 @@
+.editable-title {
+  margin: 5px 0px;
+}
+
+.portfolio-title {
+  background-color: transparent;
+  color: white;
+  border: none;
+  z-index: 100;
+  width: 100%;
+}
+
+.portfolio-title:hover {
+  cursor: text;
+}
+
+.editable-title input:focus~.edit-tools-title {
+  display: flex;
+}
+
+.edit-tools-title {
+  display: none;
+  background-color: gray;
+  border-top: #575757 solid 7px;
+  border-radius: 5px;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 60px;
+  width: 190px;
+  position: absolute;
+  transform: translateX(380px);
+  z-index: 100;
+}
+
+.edit-tools-title button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 26px;
+}
+
+.edit-tools-title button:hover, input:hover, select:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
+}
+
+.edit-tools-title:focus-within {
+  display: flex;
+}
+
+.edit-tools-title:hover {
+  display: flex;
+}
+
+.edit-tools-title-delete-button {
+  color: #2e2e2e;
+  border-radius: 3px;
+  background-color: #fd2626de;
+}
+
+.edit-tools-title-delete-button:hover~.edit-tools-title-delete-button-tooltip {
+  opacity: 1;
+}
+
+.edit-tools-title-delete-button-tooltip {
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  background-color: #111111;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  z-index: 1;
+  transform: translate(160px, -14px);
+  transition: all ease 0.2s;
+  transition-delay: 0.4s;
+  font-size: 0.9rem;
+}
+
+.edit-tools-title-delete-button:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}

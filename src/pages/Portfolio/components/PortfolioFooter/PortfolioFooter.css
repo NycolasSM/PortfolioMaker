@@ -1,0 +1,29 @@
+.portfolio-footer {
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 310px;
+}
+
+.portfolio-footer div {
+  display: flex;
+  gap: 95px;
+  margin-top: 40px;
+}
+
+.portfolio-footer hr {
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.portfolio-footer p {
+  color: gray;
+}
+
+.portfolio-footer-icon:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}

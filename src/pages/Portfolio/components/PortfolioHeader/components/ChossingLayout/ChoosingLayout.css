@@ -1,0 +1,56 @@
+.portfolio-choosing {
+  height: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.portfolio-choosing img {
+  height: 200px;
+}
+
+.portfolio-chosing-label {
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.portfolio-choosing img:hover {
+  outline: 1px white solid;
+   cursor: pointer;
+}
+
+.portfolio-header-change-layout-button {
+  position: absolute;
+  transform: translate(20px, 20px);
+  opacity: 0.5;
+  transition: all ease 0.2s;
+}
+
+.portfolio-header-change-layout-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio-header-change-layout-button:hover ~ .portfolio-header-change-layout-button-label {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.portfolio-header-change-layout-button:hover, .portfolio-header-change-layout-button-label:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio-header-change-layout-button-label {
+  z-index: -1;
+  position: absolute;
+  transform: translate(-14px, 52px);
+  color: rgba(255, 255, 255, 0.788);
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all ease 0.2s;
+}

@@ -1,0 +1,42 @@
+.profile-image:hover {
+  cursor: pointer;
+}
+
+.profile-image-container {
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.profile-image {
+  height: 200px;
+}
+
+.edit-tools-profile-image {
+  display: none;
+  background-color: gray;
+  border-top: #575757 solid 7px;
+  border-radius: 5px;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 190px;
+  width: 160px;
+  position: fixed;
+  transform: translateY(180px);
+}
+
+.profile-image:focus ~ .edit-tools-profile-image {
+  display: flex;
+}
+
+.edit-tools-profile-image:focus-within {
+  display: flex;
+}
+
+.edit-tools-profile-image:hover {
+  display: flex;
+}
