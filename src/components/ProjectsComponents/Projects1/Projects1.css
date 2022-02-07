@@ -1,23 +1,34 @@
-.project-component_1 {
+.project-component_1-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-component_1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr ;
+  grid-template-areas: 'Coloumn1 Space Coloumn2';
+  padding: 11px;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(199, 60, 74) , rgb(127, 73, 197));
   border-radius: 30px;
   width: 90vw;
-  max-width: 1500px;
+  max-width: 1400px;
 }
 
 .project-component_1 img{
-  display: flex;
-  flex: 30%;
-  height: 500px;
+  height: 420px;
+  margin: auto;
+}
+
+.project-component_1 img:hover {
+  cursor: pointer;
 }
 
 .project-component_1-description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   padding-left: 60px;
   flex: 40%;
@@ -30,6 +41,15 @@
 .project-component_1-description p {
   font-size: 1.5rem;
   width: 400px;
+  height: 100px;
+}
+
+.project-component_1-description p:hover {
+  cursor: text;
+}
+
+.project-component_1-description p:empty:focus::before {
+  content: "";
 }
 
 .project-component_1-description p:empty::before {
@@ -40,11 +60,45 @@
   color: #fd2626de;
   opacity: 1;
   transition: all ease 0.1s;
-  position: absolute;
-  left: 1%;
 }
 
 .project-component_1-delete-button:hover {
-  opacity: 1;
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.project-component_1-edit-window {
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  background-color: rgb(84, 89, 102);
+  padding: 3px;
+  z-index: 1000;
+}
+
+.edit-tools-change-grid-button {
+  background-color: gainsboro;
+  border-radius: 3px;
+  color: black;
+  transition: all ease 0.1s;
+}
+
+.edit-tools-change-grid-button:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.project-component_1-config-button {
+  margin-top: -30px;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.project-component_1-config-button:hover {
+  background-color: #77777770;
   cursor: pointer;
 }

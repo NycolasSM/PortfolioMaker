@@ -9,6 +9,7 @@ import { RiPlayListAddLine } from 'react-icons/ri'
 import { FaRegEdit } from 'react-icons/fa'
 import { BsTrash } from 'react-icons/bs'
 import { MdOutlinePreview } from 'react-icons/md'
+import { GrPowerReset } from 'react-icons/gr'
 
 type Props = {
   id: number;
@@ -29,8 +30,8 @@ const AddNewSection: React.FC<Props> = ({ deleteSection, addNewSection }) => {
 
   const [sectionbackgroundColor, setSectionBackgroundColor] = useState("")
   const [sectionBorderRadius, setSectionBorderRadius] = useState("")
-  const [alignContent, setAlignContent] = useState("center")
 
+  const [showSectionConfigurationButtons, setShowSectionConfigurationButtons] = useState(false)
   const [showSectionConfiguration, setShowSectionConfiguration] = useState(false)
 
   const createNewComponent = () => {
@@ -71,7 +72,6 @@ const AddNewSection: React.FC<Props> = ({ deleteSection, addNewSection }) => {
           minHeight: `${isSectionEditable ? "350px" : "50px"}`,
           backgroundColor: sectionbackgroundColor,
           borderRadius: `${sectionBorderRadius}px`,
-          alignItems: alignContent
         }}>
           <label className="section-preview-button">
             <input type="checkbox" className="section-preview-button-input" onClick={() => setIsSectionEditable(!isSectionEditable)} name="section-preview" id="sectionPreviewButton" />
@@ -80,8 +80,8 @@ const AddNewSection: React.FC<Props> = ({ deleteSection, addNewSection }) => {
           </label>
           {isSectionEditable ? <>
             <div className="section-configuration">
-              <AiOutlineControl className="section-configuration-button" tabIndex={0} size={34} />
-              <div className="options-section-buttons-container">
+              <AiOutlineControl className="section-configuration-button" tabIndex={0} size={34} onClick={() => setShowSectionConfigurationButtons(!showSectionConfigurationButtons)} style={{ backgroundColor: `${showSectionConfigurationButtons ? "#5f5f5f" : ""}`, opacity: `${showSectionConfigurationButtons ? "1" : "0.4"}` }} />
+              <div className="options-section-buttons-container" style={{ transform: `translateX(${!showSectionConfigurationButtons ? "150px" : "0"})` }}>
                 <div className="section-configuration-blur"></div>
                 <div className="options-section-buttons">
                   <FaRegEdit onClick={() => setShowSectionConfiguration(!showSectionConfiguration)} style={{ backgroundColor: `${showSectionConfiguration ? "gray" : ""}` }} size={25} tabIndex={0} />
@@ -89,24 +89,22 @@ const AddNewSection: React.FC<Props> = ({ deleteSection, addNewSection }) => {
                   <AiOutlineArrowDown size={25} />
                   <BsTrash onClick={() => deleteSection()} size={25} />
                 </div>
+                {
+                  showSectionConfiguration ? <>
+                    <div className="options-section-configuration">
+                      <div className="options-section-configuration-background-color">
+                        <label htmlFor="sectionBackgroundColor">Section Color</label>
+                        <div>
+                          <input type="color" onChange={(e) => setSectionBackgroundColor(e.target.value)} name="sectionBackgroundColor" id="sectionBackgroundColor" />
+                          <GrPowerReset className="options-section-configuration-background-color-reset" onClick={() => { setSectionBackgroundColor("111"), console.log(sectionbackgroundColor) }} size={20} />
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                    :
+                    ""
+                }
               </div>
-              {
-                showSectionConfiguration ? <>
-                  <div className="options-section-configuration">
-                    <div>
-                      <label htmlFor="sectionBackgroundColor">Background Color</label>
-                      <input type="color" onChange={(e) => setSectionBackgroundColor(e.target.value)} name="sectionBackgroundColor" id="sectionBackgroundColor" />
-                    </div>
-                    <div className="options-section-configuration-content-align">
-                      <button onClick={() => setAlignContent("flex-start")}>left</button>
-                      <button onClick={() => setAlignContent("center")}>center</button>
-                      <button onClick={() => setAlignContent("flex-end")}>right</button>
-                    </div>
-                  </div>
-                </>
-                  :
-                  ""
-              }
             </div>
           </>
             :

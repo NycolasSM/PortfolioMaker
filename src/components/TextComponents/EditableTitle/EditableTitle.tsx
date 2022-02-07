@@ -17,7 +17,7 @@ type Props = {
   isDeletable: boolean;
 }
 
-const EditableTitle: React.FC<Props> = ({ deleteComponent, isDeletable = false, defaultText = "insert text", defaultFontSize = 40, textAlign = "center", size = 19 }) => {
+const EditableTitle: React.FC<Props> = ({ deleteComponent, isDeletable = false, defaultText = "insert text", defaultFontSize = 40, textAlign = "center", size }) => {
 
   const [fontWeight, setFontWeight] = useState("normal")
   const [fontSize, setFontSize] = useState(defaultFontSize)
@@ -69,7 +69,7 @@ const EditableTitle: React.FC<Props> = ({ deleteComponent, isDeletable = false, 
 
   return (
     <div className="editable-title">
-      <input type="text" name="title" autoComplete="off" tabIndex={0} className="portfolio-title" id="title" size={size} placeholder={defaultText} spellCheck={false}
+      <input type="text" name="title" autoComplete="off" tabIndex={0} maxLength={size} className="editable-title" id="title" size={size} placeholder={defaultText} spellCheck={false}
         style={{
           fontWeight: `${fontWeight}`,
           fontSize: `${fontSize}px`,

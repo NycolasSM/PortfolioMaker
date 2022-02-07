@@ -2,7 +2,7 @@
   margin: 5px 0px;
 }
 
-.portfolio-title {
+.editable-title {
   background-color: transparent;
   color: white;
   border: none;
@@ -10,7 +10,11 @@
   width: 100%;
 }
 
-.portfolio-title:hover {
+.editable-title::placeholder {
+  color: gray;
+}
+
+.editable-title:hover {
   cursor: text;
 }
 
@@ -63,9 +67,11 @@
 
 .edit-tools-title-delete-button:hover~.edit-tools-title-delete-button-tooltip {
   opacity: 1;
+  visibility: inherit;
 }
 
 .edit-tools-title-delete-button-tooltip {
+  visibility: hidden;
   display: inline-block;
   opacity: 0;
   position: absolute;
@@ -81,6 +87,5 @@
 }
 
 .edit-tools-title-delete-button:hover {
-  filter: brightness(0.9);
   cursor: pointer;
 }
