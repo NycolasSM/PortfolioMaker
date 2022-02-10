@@ -4,11 +4,13 @@ import './ChoosingLayout.css'
 
 import Layout1 from './layouts/Layout1/Layout1';
 import Layout2 from './layouts/Layout2/Layout2';
+import Layout3 from './layouts/Layout3/Layout3';
 
 import { FaExchangeAlt } from 'react-icons/fa'
 
 import HeaderLayout1 from '../../../../../../assets/HeadeLayout1.png'
 import HeaderLayout2 from '../../../../../../assets/HeadeLayout2.png'
+import HeaderLayout3 from '../../../../../../assets/HeadeLayout3.png'
 
 type Props = {
   setIsChoosenHeaderLayout: () => void;
@@ -23,7 +25,8 @@ const ChoosingLayout: React.FC<Props> = ({
 
   const [headersLayoutArray, setHeadersLayoutArray] = useState([
     <Layout1 previewImg={HeaderLayout1} />,
-    <Layout2 previewImg={HeaderLayout2} />
+    <Layout2 previewImg={HeaderLayout2} />,
+    <Layout3 previewImg={HeaderLayout3} />
   ])
 
   const [choosenComponent, setChoosenComponent] = useState()

@@ -1,0 +1,63 @@
+.portfolio-header_layout3 {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-header-container_layout3 {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr ;
+  grid-template-areas: 'Coloumn1 Image Coloumn2';
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.portfolio-user-apresentation_layout3 {
+  grid-area: "Coloumn1";
+}
+
+.portfolio-user-apresentation_layout3 span {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.portfolio-user-apresentation_layout3 h3{
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.portfolio-apresentation-buttons_layout3 button {
+  margin-top: 30px;
+  margin-right: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  display: inline-block;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+}
+
+.portfolio-apresentation-buttons_layout3 button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 26px;
+}
+
+.portfolio-user-apresentation2_layout3 {
+  margin-Top: 30px;
+  font-size: 1.1rem;
+  padding-left: 30px;
+  grid-Area: Coloumn2;
+}
+
+.portfolio-user-apresentation2_layout3 p:empty:focus::before  {
+  content: "";
+}
+
+.portfolio-user-apresentation2_layout3 p:empty::before  {
+  content: "dolor sit amet consectetur, adipisicing elit. Architecto, expedita molestiae. Unde non nihil velit, adipisicing elit. Architecto, expedita molestiae. adipisicing elit. Architecto, expedita molestiae.";
+}

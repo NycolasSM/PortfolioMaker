@@ -1,14 +1,16 @@
 .portfolio-choosing {
-  height: 320px;
+  width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
+  padding-bottom: 100px;
 }
 
 .portfolio-choosing img {
   height: 200px;
+  width: 533px;
 }
 
 .portfolio-chosing-label {
